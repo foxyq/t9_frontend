@@ -1,6 +1,19 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import Message from "./components/Message";
+import PhoneForm from "./components/PhoneForm";
+
+import logo from "./assets/phone.ico";
+import Background from "./assets/phone_background.png";
+
+import "./App.css";
+
+var sectionStyle = {
+  width: "100%",
+  // height: "400px",
+  backgroundImage: "url(" + { Background } + ")"
+};
 
 class App extends Component {
   render() {
@@ -8,14 +21,29 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>T9 phone keyboard simulator </h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Router>
+          <div className="t9_layout">
+            <div
+              className="wrapper"
+              style="backgroundImage: `url(${Background})`"
+            >
+              <p className="App-intro">woop woop</p>
+              <Message />
+              <PhoneForm />
+            </div>
+          </div>
+        </Router>
       </div>
     );
   }
 }
 
 export default App;
+
+class Section extends Component {
+  render() {
+    return <section style={sectionStyle} />;
+  }
+}

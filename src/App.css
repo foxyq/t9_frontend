@@ -1,9 +1,18 @@
+@font-face {
+  font-family: "nokianregular";
+  src: url("./assets/nokian-webfont.woff2") format("woff2"),
+    url("./assets/nokian-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
+  font-family: "nokianregular", Arial, Helvetica, sans-serif;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 7s linear;
   height: 80px;
 }
 
@@ -19,6 +28,10 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
