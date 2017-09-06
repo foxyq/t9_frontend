@@ -1,28 +1,31 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import { updateCurrent, saveTodo } from "../reducers/Todo";
+import { sendNumbers, updateCurrent } from "../reducers/numbers";
 
 class PhoneForm extends Component {
   handleInputChange = evt => {
     const val = evt.target.value;
-    // this.props.updateCurrent(val);
+    this.props.updateCurrent(val);
   };
 
   handleSubmit = evt => {
     evt.preventDefault();
-    // this.props.saveTodo(this.props.currentTodo);
+    this.props.sendNumbers(this.props.input);
   };
 
   render() {
-    const { currentTodo } = this.props;
+    const { input } = this.props;
 
     return (
       <form onSubmit={this.handleSubmit}>
         <input
+          className="number_input"
           type="text"
           onChange={this.handleInputChange}
-          value={currentTodo}
+          value={input}
         />
+        <input type="submit" />
+        <span>Odpoved: {this.props.apiResults}</span>
       </form>
     );
   }
@@ -30,8 +33,8 @@ class PhoneForm extends Component {
 
 export default connect(
   state => ({
-    // currentTodo: state.todo.currentTodo
+    input: state.numbers.input,
+    apiResults: state.numbers.apiResults // druhy problem
   }),
-  {}
-  //   { updateCurrent, saveTodo }
+  { sendNumbers, updateCurrent }
 )(PhoneForm);

@@ -1,11 +1,11 @@
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
-// import todoReducer from "./reducers/Todo";
+import numberReducer from "./reducers/numbers";
 import messageReducer from "./reducers/messages";
 
 const reducer = combineReducers({
-  //   todo: todoReducer,
+  numbers: numberReducer,
   message: messageReducer
 });
 
