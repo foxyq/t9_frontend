@@ -5,7 +5,8 @@
   font-weight: normal;
   font-style: normal;
 }
-.App {
+.App,
+input {
   text-align: center;
   font-family: "nokianregular", Arial, Helvetica, sans-serif;
 }
@@ -43,7 +44,7 @@
   background-position-x: 50%;
   text-align: center;
   position: absolute;
-  top: -250px;
+  top: -440px;
   margin: 0px auto;
   width: 100%;
   height: 1600px;
@@ -73,4 +74,36 @@
   border: 1px dashed black;
   outline: none;
   font-size: 25px;
+}
+.submit_button {
+  background: transparent;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: 0px auto;
+  width: 200px;
+  font-size: 22px;
+}
+.message {
+  display: block;
+  padding-top: 25px;
+}
+.left-col,
+ol {
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .phone-wrapper {
+    background-image: none;
+  }
+  .message {
+    padding-top: 0px;
+  }
+  .right_col {
+    padding-top: 200px;
+  }
+  .submit_button {
+    position: relative;
+  }
 }
