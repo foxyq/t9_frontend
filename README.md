@@ -1,4 +1,4 @@
-kiwi.com homework / frontend part
+frontend part
 
 1. git clone
 2. yarn install
