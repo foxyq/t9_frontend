@@ -1,14 +1,14 @@
 @font-face {
-  font-family: "nokianregular";
-  src: url("./assets/nokian-webfont.woff2") format("woff2"),
-    url("./assets/nokian-webfont.woff") format("woff");
+  font-family: 'nokianregular';
+  src: url('./assets/nokian-webfont.woff2') format('woff2'),
+    url('./assets/nokian-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 .App,
 input {
   text-align: center;
-  font-family: "nokianregular", Arial, Helvetica, sans-serif;
+  font-family: 'nokianregular', Arial, Helvetica, sans-serif;
 }
 .App-logo {
   animation: App-logo-spin infinite 7s linear;
@@ -39,7 +39,7 @@ input {
   }
 }
 .phone-wrapper {
-  background-image: url("assets/phone_background.png");
+  background-image: url('assets/phone_background.png');
   background-repeat: no-repeat;
   background-position-x: 50%;
   text-align: center;
@@ -85,9 +85,17 @@ input {
   width: 200px;
   font-size: 22px;
 }
+
+@keyframes blinker {
+  30% {
+    opacity: 0;
+  }
+}
+
 .message {
   display: block;
   padding-top: 25px;
+  animation: blinker 1s linear infinite;
 }
 .left-col,
 ol {
